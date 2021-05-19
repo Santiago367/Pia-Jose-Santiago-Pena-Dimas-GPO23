@@ -38,5 +38,5 @@ class Empleado:
         for linea in archivo:
             datos = linea.strip().split('|')
             if datos[0] == id_buscado:
-                print(datos[0],datos[1])
+                print(datos[0],datos[1],datos[2])
         archivo.close()
