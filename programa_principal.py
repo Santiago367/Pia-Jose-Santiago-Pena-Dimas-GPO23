@@ -1,18 +1,14 @@
 from empleado import Empleado
 
-empleado3 = Empleado("5","ejemplo4","Avenida23")
-
-idej = "12"
-nomej = "lolo"
-direj = "democr"
+salir = False
 
 while not salir:
  
     print ("1. Administrar Empleados")
     print ("7. Salir")
 
-    print ("Elige una opcion")
-    opcion = input()
+    print ("Elige una opcion2")
+    opcion = int(input())
  
     if opcion == 1:
         print("Empleados")
@@ -20,7 +16,7 @@ while not salir:
         print("2. Mostrar todos los empleados")
         print("3. Buscar empleado por id")
 
-        opcion_empleados = input()
+        opcion_empleados = int(input())
         if opcion_empleados == 1:
             print("ingrese el id del Empleado: ")
             id_del_empleado = input()
@@ -31,12 +27,20 @@ while not salir:
 
             crear_empleado = Empleado(id_del_empleado,nombre_del_empleado,direccion_del_empleado)
             crear_empleado.guardar()
+            break
+        elif opcion_empleados == 2:
+            Empleado.consultar_todo()
+            break
+        elif opcion_empleados == 3:
+            print("¿Cual es la id que desea buscar?")
+            id_empleado_buscar = input()
+            Empleado.consultar_por_id(Empleado, id_empleado_buscar)
+            break
+        break
+    
     elif opcion == 7:
         salir = True
-    else:
-        print ("Introduce un numero entre 1 y 3")
+        break
+    
 
-crear_empleado = Empleado(idej,nomej,direj)
 
-crear_empleado.guardar()
-Empleado.consultar_por_id(Empleado, "5")
