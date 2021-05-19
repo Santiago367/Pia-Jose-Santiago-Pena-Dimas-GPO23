@@ -18,7 +18,12 @@ class Empleado:
 
     def guardar(self):
         archivo = open("empleado.txt", "a")
-        archivo.write(self.id_empleado,"|",self.nombre,"|",self.direccion)
+        archivo.write("\n")
+        archivo.write(self.id_empleado)
+        archivo.write("|")
+        archivo.write(self.nombre)
+        archivo.write("|")
+        archivo.write(self.direccion)
         archivo.close()
 
     def consultar_todo(self):
@@ -26,4 +31,12 @@ class Empleado:
         for linea in archivo:
             datos = linea.strip().split('|')
             print(datos[0],datos[1])
+        archivo.close()
+
+    def consultar_por_id(self, id_buscado):
+        archivo = open("empleado.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            if datos[0] == id_buscado:
+                print(datos[0],datos[1])
         archivo.close()
