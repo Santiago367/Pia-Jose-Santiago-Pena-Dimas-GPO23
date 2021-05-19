@@ -16,4 +16,10 @@ class Empleado:
     def direccion(self):
         return self.__direccion
 
+    def guardar(self):
+        archivo = open("empleado.txt", "a")
+        archivo.write("hola")
 
+archivo = open("empleado.txt", "a")
+archivo.write("hola")
+archivo.close()
