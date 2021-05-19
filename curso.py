@@ -15,3 +15,13 @@ class Empleado:
     @property
     def id_empleado(self):
         return self.__id_empleado
+
+    def guardar(self):
+        archivo = open("curso.txt", "a")
+        archivo.write(self.id_curso)
+        archivo.write("|")
+        archivo.write(self.descripcion)
+        archivo.write("|")
+        archivo.write(self.id_empleado)
+        archivo.write("\n")
+        archivo.close()
