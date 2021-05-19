@@ -18,8 +18,12 @@ class Empleado:
 
     def guardar(self):
         archivo = open("empleado.txt", "a")
-        archivo.write("hola")
+        archivo.write(self.id_empleado,"|",self.nombre,"|",self.direccion)
+        archivo.close()
 
-archivo = open("empleado.txt", "a")
-archivo.write("hola")
-archivo.close()
+    def consultar_todo(self):
+        archivo = open("empleado.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            print(datos[0],datos[1])
+        archivo.close()
