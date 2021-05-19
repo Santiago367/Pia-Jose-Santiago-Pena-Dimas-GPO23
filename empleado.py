@@ -1,5 +1,5 @@
 class Empleado:
-    def __init__(self, id_empleado = 1, nombre = "fsfs", direccion = ""):
+    def __init__(self, id_empleado = 1, nombre = "fsfs", direccion = "Calle"):
         self.__id_empleado = id_empleado
         self.__nombre = nombre
         self.__direccion = direccion
@@ -18,19 +18,19 @@ class Empleado:
 
     def guardar(self):
         archivo = open("empleado.txt", "a")
-        archivo.write("\n")
         archivo.write(self.id_empleado)
         archivo.write("|")
         archivo.write(self.nombre)
         archivo.write("|")
         archivo.write(self.direccion)
+        archivo.write("\n")
         archivo.close()
 
-    def consultar_todo(self):
+    def consultar_todo():
         archivo = open("empleado.txt", "r")
         for linea in archivo:
             datos = linea.strip().split('|')
-            print(datos[0],datos[1])
+            print(datos[0],datos[1],datos[2])
         archivo.close()
 
     def consultar_por_id(self, id_buscado):
