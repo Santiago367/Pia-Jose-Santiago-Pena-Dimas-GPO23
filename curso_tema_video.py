@@ -32,3 +32,11 @@ class Tema_video:
             datos = linea.strip().split('|')
             print(datos[0],datos[1],datos[2])
         archivo.close()
+
+    def consultar_por_id(self, id_buscadoTemaVideo):
+        archivo = open("curso_tema_video.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            if datos[0] == id_buscadoTemaVideo:
+                print(datos[0],datos[1],datos[2])
+        archivo.close()
