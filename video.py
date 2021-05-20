@@ -20,3 +20,15 @@ class Video:
     @property
     def fecha_publicacion(self):
         return self.__fecha_publicacion
+
+    def guardar(self):
+        archivo = open("video.txt", "a")
+        archivo.write(self.id_video)
+        archivo.write("|")
+        archivo.write(self.nombre)
+        archivo.write("|")
+        archivo.write(self.url)
+        archivo.write("|")
+        archivo.write(self.fecha_publicacion)
+        archivo.write("\n")
+        archivo.close()
