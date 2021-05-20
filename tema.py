@@ -25,3 +25,11 @@ class Tema:
             datos = linea.strip().split('|')
             print(datos[0],datos[1])
         archivo.close()
+
+    def consultar_por_id(self, id_buscadoTema):
+        archivo = open("tema.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            if datos[0] == id_buscadoTema:
+                print(datos[0],datos[1])
+        archivo.close()
