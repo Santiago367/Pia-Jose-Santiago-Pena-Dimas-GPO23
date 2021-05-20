@@ -1,5 +1,5 @@
 class Tema:
-    def __init__(self, id_tema = 1, nombre = "fsfs"):
+    def __init__(self, id_tema = 1, nombre = "Tema ejemplo"):
         self.__id_tema = id_tema
         self.__nombre = nombre
 
