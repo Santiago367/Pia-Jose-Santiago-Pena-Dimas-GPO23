@@ -32,3 +32,10 @@ class Video:
         archivo.write(self.fecha_publicacion)
         archivo.write("\n")
         archivo.close()
+
+    def consultar_todo():
+        archivo = open("video.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            print(datos[0],datos[1],datos[2],datos[3])
+        archivo.close()
