@@ -1,5 +1,5 @@
 class Empleado:
-    def __init__(self, id_empleado = 1, nombre = "fsfs", direccion = "Calle"):
+    def __init__(self, id_empleado = 1, nombre = "Alberto Martinez", direccion = "Calle libertadores"):
         self.__id_empleado = id_empleado
         self.__nombre = nombre
         self.__direccion = direccion
