@@ -1,5 +1,5 @@
 class Video:
-    def __init__(self, id_video = 1, nombre = "fsfs", url = "Calle", fecha_publicacion = "12/03/2020"):
+    def __init__(self, id_video = 1, nombre = "Como hacer", url = "https://ejemplo.com", fecha_publicacion = "12/03/2020"):
         self.__id_video = id_video
         self.__nombre = nombre
         self.__url = url
