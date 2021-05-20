@@ -15,3 +15,13 @@ class Tema_video:
     @property
     def id_video(self):
         return self.__id_video
+
+    def guardar(self):
+        archivo = open("curso_tema_video.txt", "a")
+        archivo.write(self.id_CTV)
+        archivo.write("|")
+        archivo.write(self.id_CT)
+        archivo.write("|")
+        archivo.write(self.id_video)
+        archivo.write("\n")
+        archivo.close()
