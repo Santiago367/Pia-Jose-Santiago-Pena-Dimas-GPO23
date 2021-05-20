@@ -182,6 +182,26 @@ while not salir:
             Tema_video.consultar_por_id(Tema_video, id_temaVideo_buscar)
             break
 
+    elif opcion == 6:
+        print("Temas del curso")
+        print("1. Registrar tema del curso")
+        print("2. Mostrar todos los temas de los cursos")
+        print("3. Buscar tema del curso por id")
+
+        opcion_temas_cursos = int(input())
+
+        if opcion_temas_cursos == 1:
+            agregar_temaCurso()()            
+            break
+        elif opcion_temas_cursos == 2:
+            Tema_curso.consultar_todo()
+            break
+        elif opcion_temas_cursos == 3:
+            print("¿Cual es la id del tema del curso que desea buscar?")
+            id_temaCurso_buscar = input()
+            Tema_curso.consultar_por_id(Tema_curso, id_temaCurso_buscar)
+            break
+
     elif opcion == 7:
         salir = True
         break
