@@ -16,4 +16,12 @@ class Tema_curso:
     def id_tema(self):
         return self.__id_tema
 
-    
+    def guardar(self):
+        archivo = open("curso_tema.txt", "a")
+        archivo.write(self.id_CT)
+        archivo.write("|")
+        archivo.write(self.id_curso)
+        archivo.write("|")
+        archivo.write(self.id_tema)
+        archivo.write("\n")
+        archivo.close()
