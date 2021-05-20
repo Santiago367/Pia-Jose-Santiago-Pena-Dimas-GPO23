@@ -39,3 +39,11 @@ class Video:
             datos = linea.strip().split('|')
             print(datos[0],datos[1],datos[2],datos[3])
         archivo.close()
+
+    def consultar_por_id(self, id_buscadoVideo):
+        archivo = open("video.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            if datos[0] == id_buscadoVideo:
+                print(datos[0],datos[1],datos[2],datos[3])
+        archivo.close()
