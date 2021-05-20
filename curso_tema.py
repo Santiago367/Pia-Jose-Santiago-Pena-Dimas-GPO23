@@ -25,3 +25,10 @@ class Tema_curso:
         archivo.write(self.id_tema)
         archivo.write("\n")
         archivo.close()
+    
+    def consultar_todo():
+        archivo = open("curso_tema.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            print(datos[0],datos[1],datos[2])
+        archivo.close()
