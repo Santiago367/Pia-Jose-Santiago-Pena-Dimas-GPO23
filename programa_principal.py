@@ -1,6 +1,28 @@
 from empleado import Empleado
 from curso import Curso
 
+def agregar_empleado():
+    print("ingrese el id del Empleado: ")
+    id_del_empleado = input()
+    print("Ingrese el nombre del Empleado: ")
+    nombre_del_empleado = input()
+    print("Ingrese la direccion del Empleado: ")
+    direccion_del_empleado = input()
+
+    crear_empleado = Empleado(id_del_empleado,nombre_del_empleado,direccion_del_empleado)
+    crear_empleado.guardar()
+
+def agregar_curso():
+    print("ingrese el id del curso: ")
+    id_del_curso = input()
+    print("Ingrese la descripcion del curso: ")
+    descripcion_del_curso = input()
+    print("Ingrese la id del Empleado: ")
+    id_del_empleado = input()
+
+    crear_curso = Curso(id_del_curso,descripcion_del_curso,id_del_empleado)
+    crear_curso.guardar()
+
 salir = False
 
 while not salir:
@@ -20,15 +42,7 @@ while not salir:
 
         opcion_empleados = int(input())
         if opcion_empleados == 1:
-            print("ingrese el id del Empleado: ")
-            id_del_empleado = input()
-            print("Ingrese el nombre del Empleado: ")
-            nombre_del_empleado = input()
-            print("Ingrese la direccion del Empleado: ")
-            direccion_del_empleado = input()
-
-            crear_empleado = Empleado(id_del_empleado,nombre_del_empleado,direccion_del_empleado)
-            crear_empleado.guardar()
+            agregar_empleado()
             break
         elif opcion_empleados == 2:
             Empleado.consultar_todo()
@@ -49,15 +63,7 @@ while not salir:
         opcion_cursos = int(input())
 
         if opcion_cursos == 1:
-            print("ingrese el id del curso: ")
-            id_del_curso = input()
-            print("Ingrese la descripcion del curso: ")
-            descripcion_del_curso = input()
-            print("Ingrese la id del Empleado: ")
-            id_del_empleado = input()
-
-            crear_curso = Curso(id_del_curso,descripcion_del_curso,id_del_empleado)
-            crear_curso.guardar()
+            agregar_curso()
             break
         elif opcion_cursos == 2:
             Curso.consultar_todo()
@@ -71,5 +77,3 @@ while not salir:
         salir = True
         break
     
-
-
