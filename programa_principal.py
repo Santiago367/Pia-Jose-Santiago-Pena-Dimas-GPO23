@@ -1,3 +1,4 @@
+from curso_tema import Tema_curso
 from curso_tema_video import Tema_video
 from empleado import Empleado
 from curso import Curso
@@ -58,6 +59,17 @@ def agregar_temaVideo():
 
     crear_temaVideo = Tema_video(id_del_temaVideo, id_del_temaCurso, id_del_Video)
     crear_temaVideo.guardar()
+
+def agregar_temaCurso():
+    print("ingrese el id del tema del curso: ")
+    id_del_temaCurso = input()
+    print("Ingrese el id del curso: ")
+    id_del_Curso = input()
+    print("Ingrese el id del tema: ")
+    id_del_Tema = input()
+
+    crear_temaCurso = Tema_curso(id_del_temaCurso,id_del_Curso,id_del_Tema)
+    crear_temaCurso.guardar()
 
 salir = False
 
