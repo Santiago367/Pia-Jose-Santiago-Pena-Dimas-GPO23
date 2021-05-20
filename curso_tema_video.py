@@ -25,3 +25,10 @@ class Tema_video:
         archivo.write(self.id_video)
         archivo.write("\n")
         archivo.close()
+
+    def consultar_todo():
+        archivo = open("curso_tema_video.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            print(datos[0],datos[1],datos[2])
+        archivo.close()
