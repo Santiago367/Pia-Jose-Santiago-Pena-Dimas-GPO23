@@ -87,6 +87,26 @@ while not salir:
             id_curso_buscar = input()
             Curso.consultar_por_id(Curso, id_curso_buscar)
             break
+    
+    elif opcion == 3:
+        print("Videos")
+        print("1. Registrar video")
+        print("2. Mostrar todos los videos")
+        print("3. Buscar video por id")
+
+        opcion_videos = int(input())
+
+        if opcion_videos == 1:
+            agregar_video()
+            break
+        elif opcion_cursos == 2:
+            Video.consultar_todo()
+            break
+        elif opcion_cursos == 3:
+            print("¿Cual es la id que desea buscar?")
+            id_video_buscar = input()
+            Video.consultar_por_id(Video, id_video_buscar)
+            break
     elif opcion == 7:
         salir = True
         break
