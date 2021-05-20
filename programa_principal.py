@@ -1,5 +1,6 @@
 from empleado import Empleado
 from curso import Curso
+from video import Video
 
 def agregar_empleado():
     print("ingrese el id del Empleado: ")
@@ -22,6 +23,19 @@ def agregar_curso():
 
     crear_curso = Curso(id_del_curso,descripcion_del_curso,id_del_empleado)
     crear_curso.guardar()
+
+def agregar_video():
+    print("ingrese el id del video: ")
+    id_del_video = input()
+    print("Ingrese el nombre del video: ")
+    nombre_del_video = input()
+    print("Ingrese la url del video: ")
+    url_del_video = input()
+    print("Ingrese la fecha de publicacion del video: ")
+    fechapublicacion_del_video = input()
+
+    crear_video = Video(id_del_video,nombre_del_video,url_del_video,fechapublicacion_del_video)
+    crear_video.guardar()
 
 salir = False
 
