@@ -32,3 +32,11 @@ class Tema_curso:
             datos = linea.strip().split('|')
             print(datos[0],datos[1],datos[2])
         archivo.close()
+
+    def consultar_por_id(self, id_buscadoTemaCurso):
+        archivo = open("curso_tema.txt", "r")
+        for linea in archivo:
+            datos = linea.strip().split('|')
+            if datos[0] == id_buscadoTemaCurso:
+                print(datos[0],datos[1],datos[2])
+        archivo.close()
